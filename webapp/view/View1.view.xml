@@ -1,6 +1,27 @@
-<mvc:View controllerName="myinbox.controller.View1"
+<mvc:View
+    controllerName="myinbox.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page title="{i18n>title}">
+        <List
+            items="{/LeaveRequests}"
+            itemPress="onLeaveRequestsListItemPress"
+        >
+            <ObjectListItem
+                type="Navigation"
+                title="{TYPE}">
+					<ObjectAttribute text="{REASON}" />
+					<ObjectAttribute text="{FROM_DATE}-{TO_DATE}" />
+					<firstStatus>
+				<ObjectStatus
+					text="{PRIORITY}"
+					state="{
+						path: 'PRIORITY',
+						formatter: '.formatter.status'
+					}" />
+			</firstStatus>
+				</ObjectListItem>
+        </List>
     </Page>
 </mvc:View>

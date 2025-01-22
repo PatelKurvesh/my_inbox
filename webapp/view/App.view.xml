@@ -1,7 +1,15 @@
-<mvc:View controllerName="myinbox.controller.App"
+<mvc:View
+    controllerName="myinbox.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+    xmlns="sap.m"
+>
+    <SplitApp id="idSplitApp">
+        <masterPages>
+            <mvc:XMLView viewName="myinbox.view.View1" />
+        </masterPages>
+        <detailPages>
+            <mvc:XMLView viewName="myinbox.view.View2" />
+        </detailPages>
+    </SplitApp>
 </mvc:View>

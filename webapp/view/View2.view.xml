@@ -1,0 +1,7 @@
+<mvc:View controllerName="myinbox.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="{i18n>title}">
+        <Text text="DETAIL PAGE..."></Text>
+    </Page>
+</mvc:View>
