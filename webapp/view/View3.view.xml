@@ -26,8 +26,8 @@
                 <Text ></Text>
                 <Text ></Text>
                 
-                <Title text="Select leave request"  />
-                <Text text="Click on a leave request to see details"></Text>
+                <Title text="Select a leave record"  />
+                <Text text="Select a leave application to display information"></Text>
             </VBox>
         </content>
     </Page>

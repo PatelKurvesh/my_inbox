@@ -36,6 +36,10 @@
                 title="Employee ID"
                 text="{JSONModel>APPLIED_BY/EMP_ID}"
             />
+            <ObjectAttribute
+                title="Employee Name"
+                text="{JSONModel>APPLIED_BY/FIRST_NAME} {JSONModel>APPLIED_BY/LAST_NAME}"
+            />
         </ObjectHeader>
 
         <IconTabBar

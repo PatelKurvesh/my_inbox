@@ -1,8 +1,9 @@
 sap.ui.define([
     "./App.controller",
     "../formatter/Formatter",
+    "sap/m/MessageToast",
 
-], (BaseController, formatter) => {
+], (BaseController, formatter, MessageToast) => {
     "use strict";
 
     return BaseController.extend("myinbox.controller.View2", {
@@ -22,8 +23,7 @@ sap.ui.define([
             debugger;
             sap.ui.core.BusyIndicator.show(0);
             var oLeaveRequest = this.getModel("JSONModel").getProperty("/LeaveRequests");
-            // var currentUrl = window.location.href;
-            // var lastId = currentUrl.split('/Detail/')[1];
+        
 
             var oApproveLeaveObj = {
                 "LeaveRequestId": oLeaveRequest.LEAVE_REQUEST_ID,
@@ -36,11 +36,12 @@ sap.ui.define([
                 urlParameters: oApproveLeaveObj,
                 success: (oData) => {
                     debugger;
+                    
                     this.getModel("").refresh(true)
-                    this.getModel("JSONModel").refresh(true)
+                    this.getModel("JSONModel").refresh(true);                    
+                    MessageToast.show("Leave Approve successfully");
                     this.getOwnerComponent().getRouter().navTo("RouteView3")
                     sap.ui.core.BusyIndicator.hide();
-
                 },
                 error: (error) => {
                     debugger;
