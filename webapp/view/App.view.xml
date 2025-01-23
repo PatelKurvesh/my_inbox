@@ -6,10 +6,11 @@
 >
     <SplitApp id="idSplitApp">
         <masterPages>
-            <mvc:XMLView viewName="myinbox.view.View1" />
+            <mvc:XMLView viewName="myinbox.view.View1" id="masterpage"/>
         </masterPages>
         <detailPages>
-            <mvc:XMLView viewName="myinbox.view.View2" />
+            <mvc:XMLView viewName="myinbox.view.View2" id="detailPage"/>
+            <mvc:XMLView viewName="myinbox.view.View3" id="detailPage2"/>
         </detailPages>
     </SplitApp>
 </mvc:View>

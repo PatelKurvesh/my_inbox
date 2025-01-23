@@ -67,6 +67,11 @@
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
+            },
+            "JSONModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {},
+                "preload": false
             }
         },
         "resources": {
@@ -93,14 +98,41 @@
                     "name": "RouteView1",
                     "pattern": ":?query:",
                     "target": [
-                        "TargetView1"
+                        "TargetView1","TargetView3"
+                    ]
+                },
+                {
+                    "name": "RouteView2",
+                    "pattern": "Detail/{leaveID}",
+                    "target": [
+                        "TargetView2"
+                    ]
+                },
+                {
+                    "name": "RouteView3",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetView3"
                     ]
                 }
             ],
             "targets": {
                 "TargetView1": {
                     "id": "View1",
-                    "name": "View1"
+                    "name": "View1",
+                    "controlAggregation": "masterPages"
+                },
+                "TargetView2": {
+                    "id": "View2",
+                    "name": "View2",
+                    "controlAggregation": "detailPages",
+                    "transition": "flip"
+                },
+                "TargetView3": {
+                    "id": "View3",
+                    "name": "View3",
+                    "controlAggregation": "detailPages",
+                    "transition": "show"
                 }
             }
         },
