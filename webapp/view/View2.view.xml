@@ -21,7 +21,7 @@
                     icon="{path: 'JSONModel>/LeaveRequests/STATUS', formatter: '.formatter.formatStatusIcon'}"
                 />
                 <ObjectStatus
-                    inverted="true"
+                    
                     text="{JSONModel>/LeaveRequests/PRIORITY}"
                     state="{path: 'JSONModel>/LeaveRequests/PRIORITY', formatter: '.formatter.formatPriority' }"
                     icon="{path: 'JSONModel>/LeaveRequests/PRIORITY', formatter: '.formatter.formatPriorityIcon'}"

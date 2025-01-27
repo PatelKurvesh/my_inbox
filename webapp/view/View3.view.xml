@@ -16,18 +16,43 @@
                 width="100%"
                 height="100%"
             >
-                <Image
+                <!-- <Image
                     id="gifImage"
                     src="https://reportsvault.com/public/assets/images/audit-fig-1.png"
                     width="300px"
                     height="300px"
                     alt="Loading Animation"
+                /> -->
+                <!-- <Image
+							visible="{= !${/hasError} }"
+							src="{img>/products/pic1}"
+							height="{/imageHeight}"
+							width="{/imageWidth}">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Image> -->
+
+                <!-- <IllustratedMessage
+							description="Image was not found"
+							title="Not Found"
+							illustrationType="sapIllus-ErrorScreen"
+							visible="true">
+						</IllustratedMessage> -->
+
+                <IllustratedMessage
+                    illustrationType="sapIllus-SearchFolder"
+                    illustrationSize="Scene"
+                    title="Select a leave record"
+                    description="Select a leave application to display information"
                 />
-                <Text ></Text>
-                <Text ></Text>
-                
-                <Title text="Select a leave record"  />
-                <Text text="Select a leave application to display information"></Text>
+                <Text />
+                <Text />
+
+                <!-- <Title text="Select a leave record" />
+                <Text
+                    text="Select a leave application to display information"
+                /> -->
             </VBox>
         </content>
     </Page>
